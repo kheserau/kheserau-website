@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sublimeTest</title>
+	<link rel="stylesheet" href="sublimeTest.css">
+</head>
+<body>
+	<canvas id="canvas"></canvas><br>
+	<div>
+		<div id="drawShapesButtons">
+
+		<div id="fillSquare">
+		
+		<button type="submit" id="submitDraw" onclick="update()"> P-S5</button>
+		<button type="submit" id="submitDraw1" onclick="update1()"> P-S4</button>
+		<button type="submit" id="submitDraw2" onclick="update2()"> P-S3</button>
+		<button type="submit" id="submitDraw3" onclick="update3()"> P-S2</button>
+		<button type="submit" id="submitDraw4" onclick="update4()"> P-S1</button>
+	</div>
+	<div id="fillTextDiv">
+		<button type="submit" id="write" onclick="Writing()">P-T5</button>
+		<button type="submit" id="write1" onclick="Writing1()">P-T4</button>
+		<button type="submit" id="write2" onclick="Writing2()">P-T3</button>
+		<button type="submit" id="write3" onclick="Writing3()">P-T2</button>
+		<button type="submit" id="write4" onclick="Writing4()">P-T1</button><br>
+	</div>
+	<div id="fillCircleDiv">
+		<button type="submit" id="makecircle" onclick="makeCircle()">P-C5</button>
+		<button type="submit" id="makecircle1" onclick="makeCircle1()">P-C4</button>
+		<button type="submit" id="makecircle2" onclick="makeCircle2()">P-C3</button>
+		<button type="submit" id="makecircle3" onclick="makeCircle3()">P-C2</button>
+		<button type="submit" id="makecircle4" onclick="makeCircle4()">P-C1</button>
+	</div>
+	<div id="strokeSquare">
+
+		<button type="submit" id="strokesquare" onclick="strokeSquare()">D-S5</button>
+		<button type="submit" id="strokesquare1" onclick="strokeSquare1()">D-S4</button>
+		<button type="submit" id="strokesquare2" onclick="strokeSquare2()">D-S3</button>
+		<button type="submit" id="strokesquare3" onclick="strokeSquare3()">D-S2</button>
+		<button type="submit" id="strokesquare4" onclick="strokeSquare4()">D-S1</button>
+	</div>
+	<div id="strokeTextDiv">
+		<button tyype="submit" id="strtdraw" onclick="strtDraw()">D-T5</button>
+		<button tyype="submit" id="strtdraw1" onclick="strtDraw1()">D-T4</button>
+		<button tyype="submit" id="strtdraw2" onclick="strtDraw2()">D-T3</button>
+		<button tyype="submit" id="strtdraw3" onclick="strtDraw3()">D-T2</button>
+		<button tyype="submit" id="strtdraw4" onclick="strtDraw4()">D-T1</button>
+	</div>
+	<div id="strokecircleDiv">
+		<button type="submit" id="strcircle" onclick="strCircle()">D-C5</button>
+		<button type="submit" id="strcircle1" onclick="strCircle1()">D-C4</button>
+		<button type="submit" id="strcircle2" onclick="strCircle2()">D-C3</button>
+		<button type="submit" id="strcircle3" onclick="strCircle3()">D-C2</button>
+		<button type="submit" id="strcircle4" onclick="strCircle4()">D-C1</button>
+	</div>
+	</div>
+	<div id="imgDiv">
+	<div id="imageDiv">
+		<button type="submit" id="imgmake" onclick="imgMake()">IMG5</button>
+		<button type="submit" id="imgmake1" onclick="imgMake1()">IMG4</button>
+		<button type="submit" id="imgmake2" onclick="imgMake2()">IMG3</button>
+		<button type="submit" id="imgmake3" onclick="imgMake3()">IMG2</button>
+		<button type="submit" id="imgmake4" onclick="imgMake4()">IMG1</button>
+	</div>
+	<div id="leftArcDiv">
+		<button type="submit" id="leftarclarge" onclick="leftArcLarge()">L-A</button>
+	</div>
+	<div Id="righhtArcDiv">
+
+		<button type="submit" id="rightarclarge" onclick="rightArcLarge()">R-A</button>
+	</div>
+	<div id="holeSquareDiv"> 
+
+		<button type="submit" id="holesquare" onclick="holeSquare()">C-S</button>
+	</div>
+
+	</div>
+	<div id="fillSquarebuttons">
+
+		<input type="text" id="colors" placeholder="write color">
+		<input type="text" id="colors1" placeholder="write color">
+		<input type="text" id="colors2" placeholder="write color">
+		<input type="text" id="colors3" placeholder="write color">
+		<input type="text" id="colors4" placeholder="write color">
+
+		<input type="text" id="sqTrans" placeholder="square transparency">
+		<input type="text" id="sqTrans1" placeholder="square transparency">
+		<input type="text" id="sqTrans2" placeholder="square transparency">
+		<input type="text" id="sqTrans3" placeholder="square transparency">
+		<input type="text" id="sqTrans4" placeholder="square transparency">
+
+		<button type="submit" id="move" onmousedown="upmove()" onmouseup="upstop()">up</button>
+		<button type="submit" id="move1" onmousedown="rightmove()" onmouseup="rightstop()">right</button>
+		<button type="submit" id="move2" onmousedown="downmove()" onmouseup="downstop()">down</button>
+		<button type="submit" id="move3" onmousedown="leftmove()" onmouseup="leftstop()">left</button>
+
+
+		<button type="submit" id="moveA1" onmousedown="upmove1()" onmouseup="upstop1()">up</button>
+		<button type="submit" id="moveA2" onmousedown="rightmove1()" onmouseup="rightstop1()">right</button>
+		<button type="submit" id="moveA3" onmousedown="downmove1()" onmouseup="downstop1()">down</button>
+		<button type="submit" id="moveA4" onmousedown="leftmove1()" onmouseup="leftstop1()">left</button>
+
+		<button type="submit" id="moveB1" onmousedown="upmove2()" onmouseup="upstop2()">up</button>
+		<button type="submit" id="moveB2" onmousedown="rightmove2()" onmouseup="rightstop2()">right</button>
+		<button type="submit" id="moveB3" onmousedown="downmove2()" onmouseup="downstop2()">down</button>
+		<button type="submit" id="moveB4" onmousedown="leftmove2()" onmouseup="leftstop2()">left</button>
+
+		<button type="submit" id="moveC1" onmousedown="upmove3()" onmouseup="upstop3()">up</button>
+		<button type="submit" id="moveC2" onmousedown="rightmove3()" onmouseup="rightstop3()">right</button>
+		<button type="submit" id="moveC3" onmousedown="downmove3()" onmouseup="downstop3()">down</button>
+		<button type="submit" id="moveC4" onmousedown="leftmove3()" onmouseup="leftstop3()">left</button>
+
+		<button type="submit" id="moveD1" onmousedown="upmove4()" onmouseup="upstop4()">up</button>
+		<button type="submit" id="moveD2" onmousedown="rightmove4()" onmouseup="rightstop4()">right</button>
+		<button type="submit" id="moveD3" onmousedown="downmove4()" onmouseup="downstop4()">down</button>
+		<button type="submit" id="moveD4" onmousedown="leftmove4()" onmouseup="leftstop4()">left</button>
+
+		
+		<button type="submit" id="increase1" onmousedown="minHmove()" onmouseup="minHstop()">up</button>
+		<button type="submit" id="increase2" onmousedown="maxWmove()" onmouseup="maxWstop()">right</button>
+		<button type="submit" id="increase3" onmousedown="maxHmove()" onmouseup="maxHstop()">down</button>
+		<button type="submit" id="increase4" onmousedown="minWmove()" onmouseup="minWstop()">left</button>
+
+		<button type="submit" id="increaseA1" onmousedown="minHmove1()" onmouseup="minHstop1()">up</button>
+		<button type="submit" id="increaseA2" onmousedown="maxWmove1()" onmouseup="maxWstop1()">right</button>
+		<button type="submit" id="increaseA3" onmousedown="maxHmove1()" onmouseup="maxHstop1()">down</button>
+		<button type="submit" id="increaseA4" onmousedown="minWmove1()" onmouseup="minWstop1()">left</button>
+
+		<button type="submit" id="increaseB1" onmousedown="minHmove2()" onmouseup="minHstop2()">up</button>
+		<button type="submit" id="increaseB2" onmousedown="maxWmove2()" onmouseup="maxWstop2()">right</button>
+		<button type="submit" id="increaseB3" onmousedown="maxHmove2()" onmouseup="maxHstop2()">down</button>
+		<button type="submit" id="increaseB4" onmousedown="minWmove2()" onmouseup="minWstop2()">left</button>
+
+		<button type="submit" id="increaseC1" onmousedown="minHmove3()" onmouseup="minHstop3()">up</button>
+		<button type="submit" id="increaseC2" onmousedown="maxWmove3()" onmouseup="maxWstop3()">right</button>
+		<button type="submit" id="increaseC3" onmousedown="maxHmove3()" onmouseup="maxHstop3()">down</button>
+		<button type="submit" id="increaseC4" onmousedown="minWmove3()" onmouseup="minWstop3()">left</button>
+
+		<button type="submit" id="increaseD1" onmousedown="minHmove4()" onmouseup="minHstop4()">up</button>
+		<button type="submit" id="increaseD2" onmousedown="maxWmove4()" onmouseup="maxWstop4()">right</button>
+		<button type="submit" id="increaseD3" onmousedown="maxHmove4()" onmouseup="maxHstop4()">down</button>
+		<button type="submit" id="increaseD4" onmousedown="minWmove4()" onmouseup="minWstop4()">left</button><br>
+	</div>
+
+	
+	<div id="fillTextButtons">
+
+		<input type="text" id="txtTrans" placeholder="txt transparency">
+		<input type="text" id="txtTrans1" placeholder="txt transparency">
+		<input type="text" id="txtTrans2" placeholder="txt transparency">
+		<input type="text" id="txtTrans3" placeholder="txt transparency">
+		<input type="text" id="txtTrans4" placeholder="txt transparency">
+
+
+		<input type="text" id="fontcolor" placeholder="font color">
+		<input type="text" id="fontweight" placeholder="font weight">
+		<input type="text" id="fontsize" placeholder="font size">
+		<input type="text" id="fontfamily" placeholder="font family">
+		<input type="text" id="messagetext" placeholder="Write Something">
+
+		<input type="text" id="fontcolor1" placeholder="font color">
+		<input type="text" id="fontweight1" placeholder="font weight">
+		<input type="text" id="fontsize1" placeholder="font size">
+		<input type="text" id="fontfamily1" placeholder="font family">
+		<input type="text" id="messagetext1" placeholder="Write Something">
+
+		<input type="text" id="fontcolor2" placeholder="font color">
+		<input type="text" id="fontweight2" placeholder="font weight">
+		<input type="text" id="fontsize2" placeholder="font size">
+		<input type="text" id="fontfamily2" placeholder="font family">
+		<input type="text" id="messagetext2" placeholder="Write Something">
+
+		<input type="text" id="fontcolor3" placeholder="font color">
+		<input type="text" id="fontweight3" placeholder="font weight">
+		<input type="text" id="fontsize3" placeholder="font size">
+		<input type="text" id="fontfamily3" placeholder="font family">
+		<input type="text" id="messagetext3" placeholder="Write Something">
+
+		<input type="text" id="fontcolor4" placeholder="font color">
+		<input type="text" id="fontweight4" placeholder="font weight">
+		<input type="text" id="fontsize4" placeholder="font size">
+		<input type="text" id="fontfamily4" placeholder="font family">
+		<input type="text" id="messagetext4" placeholder="Write Something">
+
+		<button type="submit" id="writeLeft" onmousedown="WriteLeft()" onmouseup="WriteLeftStop()">text-left</button>
+		<button type="submit" id="writeUp" onmousedown="WriteUp()" onmouseup="WriteUpStop()">text-up</button>
+		<button type="submit" id="writeRight" onmousedown="WriteRight()" onmouseup="WriteRightStop()">text-right</button>
+		<button type="submit" id="writeBotton" onmousedown="WriteBottom()" onmouseup="WriteBottomStop()">text-bottom</button>
+
+		<button type="submit" id="writeLeft1" onmousedown="WriteLeft1()" onmouseup="WriteLeftStop1()">text-left</button>
+		<button type="submit" id="writeUp1" onmousedown="WriteUp1()" onmouseup="WriteUpStop1()">text-up</button>
+		<button type="submit" id="writeRight1" onmousedown="WriteRight1()" onmouseup="WriteRightStop1()">text-right</button>
+		<button type="submit" id="writeBotton1" onmousedown="WriteBottom1()" onmouseup="WriteBottomStop1()">text-bottom</button>
+
+		<button type="submit" id="writeLeft2" onmousedown="WriteLeft2()" onmouseup="WriteLeftStop2()">text-left</button>
+		<button type="submit" id="writeUp2" onmousedown="WriteUp2()" onmouseup="WriteUpStop2()">text-up</button>
+		<button type="submit" id="writeRight2" onmousedown="WriteRight2()" onmouseup="WriteRightStop2()">text-right</button>
+		<button type="submit" id="writeBotton2" onmousedown="WriteBottom2()" onmouseup="WriteBottomStop2()">text-bottom</button>
+
+		<button type="submit" id="writeLeft3" onmousedown="WriteLeft3()" onmouseup="WriteLeftStop3()">text-left</button>
+		<button type="submit" id="writeUp3" onmousedown="WriteUp3()" onmouseup="WriteUpStop3()">text-up</button>
+		<button type="submit" id="writeRight3" onmousedown="WriteRight3()" onmouseup="WriteRightStop3()">text-right</button>
+		<button type="submit" id="writeBotton3" onmousedown="WriteBottom3()" onmouseup="WriteBottomStop3()">text-bottom</button>
+
+		<button type="submit" id="writeLeft4" onmousedown="WriteLeft4()" onmouseup="WriteLeftStop4()">text-left</button>
+		<button type="submit" id="writeUp4" onmousedown="WriteUp4()" onmouseup="WriteUpStop4()">text-up</button>
+		<button type="submit" id="writeRight4" onmousedown="WriteRight4()" onmouseup="WriteRightStop4()">text-right</button>
+		<button type="submit" id="writeBotton4" onmousedown="WriteBottom4()" onmouseup="WriteBottomStop4()">text-bottom</button>
+	</div>
+	
+	<div id="fillCircleButtons">
+		<input type="text" id="circleColor" placeholder="color">
+		<input type="text" id="circleSize" placeholder="size">
+		<input type="text" id="circleTrans" placeholder="c transparency">
+
+		<input type="text" id="circleColor1" placeholder="color">
+		<input type="text" id="circleSize1" placeholder="size">
+		<input type="text" id="circleTrans1" placeholder="c transparency">
+
+		<input type="text" id="circleColor2" placeholder="color">
+		<input type="text" id="circleSize2" placeholder="size">
+		<input type="text" id="circleTrans2" placeholder="c transparency">
+
+		<input type="text" id="circleColor3" placeholder="color">
+		<input type="text" id="circleSize3" placeholder="size">
+		<input type="text" id="circleTrans3" placeholder="c transparency">
+
+		<input type="text" id="circleColor4" placeholder="color">
+		<input type="text" id="circleSize4" placeholder="size">
+		<input type="text" id="circleTrans4" placeholder="c transparency">
+
+		<button type="submit" id="circleup" onmousedown="circleUp()" onmouseup="circleUpStop()">c up</button>
+		<button type="submit" id="circleright" onmousedown="circleRight()" onmouseup="circleRightStop()">c right</button>
+		<button type="submit" id="circledown" onmousedown="circleDown()" onmouseup="circleDownStop()">c down</button>
+		<button type="submit" id="circleleft" onmousedown="circleLeft()" onmouseup="circleLeftStop()">c left</button>
+
+		<button type="submit" id="circleup1" onmousedown="circleUp1()" onmouseup="circleUpStop1()">c up</button>
+		<button type="submit" id="circleright1" onmousedown="circleRight1()" onmouseup="circleRightStop1()">c right</button>
+		<button type="submit" id="circledown1" onmousedown="circleDown1()" onmouseup="circleDownStop1()">c down</button>
+		<button type="submit" id="circleleft1" onmousedown="circleLeft1()" onmouseup="circleLeftStop1()">c left</button>
+
+		<button type="submit" id="circleup2" onmousedown="circleUp2()" onmouseup="circleUpStop2()">c up</button>
+		<button type="submit" id="circleright2" onmousedown="circleRight2()" onmouseup="circleRightStop2()">c right</button>
+		<button type="submit" id="circledown2" onmousedown="circleDown2()" onmouseup="circleDownStop2()">c down</button>
+		<button type="submit" id="circleleft2" onmousedown="circleLeft2()" onmouseup="circleLeftStop2()">c left</button>
+
+		<button type="submit" id="circleup3" onmousedown="circleUp3()" onmouseup="circleUpStop3()">c up</button>
+		<button type="submit" id="circleright3" onmousedown="circleRight3()" onmouseup="circleRightStop3()">c right</button>
+		<button type="submit" id="circledown3" onmousedown="circleDown3()" onmouseup="circleDownStop3()">c down</button>
+		<button type="submit" id="circleleft3" onmousedown="circleLeft3()" onmouseup="circleLeftStop3()">c left</button>
+
+		<button type="submit" id="circleup4" onmousedown="circleUp4()" onmouseup="circleUpStop4()">c up</button>
+		<button type="submit" id="circleright4" onmousedown="circleRight4()" onmouseup="circleRightStop4()">c right</button>
+		<button type="submit" id="circledown4" onmousedown="circleDown4()" onmouseup="circleDownStop4()">c down</button>
+		<button type="submit" id="circleleft4" onmousedown="circleLeft4()" onmouseup="circleLeftStop4()">c left</button>
+
+		</div>
+		
+	<div id="strokeSquareButtons">
+
+		<input type="text" id="stsqcolor" placeholder="set color">
+		<input type="text" id="stsqcolor1" placeholder="set color">
+		<input type="text" id="stsqcolor2" placeholder="set color">
+		<input type="text" id="stsqcolor3" placeholder="set color">
+		<input type="text" id="stsqcolor4" placeholder="set color">
+
+		<input type="text" id="stsqwidth" placeholder="stroke width">
+		<input type="text" id="stsqwidth1" placeholder="stroke width">
+		<input type="text" id="stsqwidth2" placeholder="stroke width">
+		<input type="text" id="stsqwidth3" placeholder="stroke width">
+		<input type="text" id="stsqwidth4" placeholder="stroke width">
+
+		<input type="text" id="stsqtrans" placeholder="transparency">
+		<input type="text" id="stsqtrans1" placeholder="transparency">
+		<input type="text" id="stsqtrans2" placeholder="transparency">
+		<input type="text" id="stsqtrans3" placeholder="transparency">
+		<input type="text" id="stsqtrans4" placeholder="transparency">
+
+		<button type="submit" id="stsqup" onmousedown="stsqUp()" onmouseup="stsqUpStop()">stsq up</button>
+		<button type="submit" id="stsqright" onmousedown="stsqRight()" onmouseup="stsqRightStop()">stsq right</button>
+		<button type="submit" id="stsqdown" onmousedown="stsqDown()" onmouseup="stsqDownStop()">stsq down</button>
+		<button type="submit" id="stsqleft" onmousedown="stsqLeft()" onmouseup="stsqLeftStop()">stsq left</button>
+
+		<button type="submit" id="stsqup1" onmousedown="stsqUp1()" onmouseup="stsqUpStop1()">stsq up</button>
+		<button type="submit" id="stsqright1" onmousedown="stsqRight1()" onmouseup="stsqRightStop1()">stsq right</button>
+		<button type="submit" id="stsqdown1" onmousedown="stsqDown1()" onmouseup="stsqDownStop1()">stsq down</button>
+		<button type="submit" id="stsqleft1" onmousedown="stsqLeft1()" onmouseup="stsqLeftStop1()">stsq left</button>
+
+		<button type="submit" id="stsqup2" onmousedown="stsqUp2()" onmouseup="stsqUpStop2()">stsq up</button>
+		<button type="submit" id="stsqright2" onmousedown="stsqRight2()" onmouseup="stsqRightStop2()">stsq right</button>
+		<button type="submit" id="stsqdown2" onmousedown="stsqDown2()" onmouseup="stsqDownStop2()">stsq down</button>
+		<button type="submit" id="stsqleft2" onmousedown="stsqLeft2()" onmouseup="stsqLeftStop2()">stsq left</button>
+
+		<button type="submit" id="stsqup3" onmousedown="stsqUp3()" onmouseup="stsqUpStop3()">stsq up</button>
+		<button type="submit" id="stsqright3" onmousedown="stsqRight3()" onmouseup="stsqRightStop3()">stsq right</button>
+		<button type="submit" id="stsqdown3" onmousedown="stsqDown3()" onmouseup="stsqDownStop3()">stsq down</button>
+		<button type="submit" id="stsqleft3" onmousedown="stsqLeft3()" onmouseup="stsqLeftStop3()">stsq left</button>
+
+		<button type="submit" id="stsqup4" onmousedown="stsqUp4()" onmouseup="stsqUpStop4()">stsq up</button>
+		<button type="submit" id="stsqright4" onmousedown="stsqRight4()" onmouseup="stsqRightStop4()">stsq right</button>
+		<button type="submit" id="stsqdown4" onmousedown="stsqDown4()" onmouseup="stsqDownStop4()">stsq down</button>
+		<button type="submit" id="stsqleft4" onmousedown="stsqLeft4()" onmouseup="stsqLeftStop4()">stsq left</button>
+
+
+
+		<button type="submit" id="stsqminh" onmousedown="stsqMinH()" onmouseup="stsqMinHStop()">stsq minH</button>
+		<button type="submit" id="stsqmaxw" onmousedown="stsqMaxW()" onmouseup="stsqMaxWStop()">stsq maxW</button>
+		<button type="submit" id="stsqmaxh" onmousedown="stsqMaxH()" onmouseup="stsqMaxHStop()">stsq maxH</button>
+		<button type="submit" id="stsqminw" onmousedown="stsqMinW()" onmouseup="stsqMinWStop()">stsq minW</button>
+		
+		<button type="submit" id="stsqminh1" onmousedown="stsqMinH1()" onmouseup="stsqMinHStop1()">stsq minH</button>
+		<button type="submit" id="stsqmaxw1" onmousedown="stsqMaxW1()" onmouseup="stsqMaxWStop1()">stsq maxW</button>
+		<button type="submit" id="stsqmaxh1" onmousedown="stsqMaxH1()" onmouseup="stsqMaxHStop1()">stsq maxH</button>
+		<button type="submit" id="stsqminw1" onmousedown="stsqMinW1()" onmouseup="stsqMinWStop1()">stsq minW</button>
+
+		<button type="submit" id="stsqminh2" onmousedown="stsqMinH2()" onmouseup="stsqMinHStop2()">stsq minH</button>
+		<button type="submit" id="stsqmaxw2" onmousedown="stsqMaxW2()" onmouseup="stsqMaxWStop2()">stsq maxW</button>
+		<button type="submit" id="stsqmaxh2" onmousedown="stsqMaxH2()" onmouseup="stsqMaxHStop2()">stsq maxH</button>
+		<button type="submit" id="stsqminw2" onmousedown="stsqMinW2()" onmouseup="stsqMinWStop2()">stsq minW</button>
+
+		<button type="submit" id="stsqminh3" onmousedown="stsqMinH3()" onmouseup="stsqMinHStop3()">stsq minH</button>
+		<button type="submit" id="stsqmaxw3" onmousedown="stsqMaxW3()" onmouseup="stsqMaxWStop3()">stsq maxW</button>
+		<button type="submit" id="stsqmaxh3" onmousedown="stsqMaxH3()" onmouseup="stsqMaxHStop3()">stsq maxH</button>
+		<button type="submit" id="stsqminw3" onmousedown="stsqMinW3()" onmouseup="stsqMinWStop3()">stsq minW</button>
+
+		<button type="submit" id="stsqminh4" onmousedown="stsqMinH4()" onmouseup="stsqMinHStop4()">stsq minH</button>
+		<button type="submit" id="stsqmaxw4" onmousedown="stsqMaxW4()" onmouseup="stsqMaxWStop4()">stsq maxW</button>
+		<button type="submit" id="stsqmaxh4" onmousedown="stsqMaxH4()" onmouseup="stsqMaxHStop4()">stsq maxH</button>
+		<button type="submit" id="stsqminw4" onmousedown="stsqMinW4()" onmouseup="stsqMinWStop4()">stsq minW</button>
+
+		</div>
+		
+	<div id="strokeTextButtons">
+
+		<input type="text" id="strfontcolor" placeholder="font color">
+		<input type="text" id="strfontweight" placeholder="font weight">
+		<input type="text" id="strfontsize" placeholder="font size">
+		<input type="text" id="strfontfamily" placeholder="font family">
+		<input type="text" id="strmessagetext" placeholder="Write Something">
+
+		<input type="text" id="strfontcolor1" placeholder="font color">
+		<input type="text" id="strfontweight1" placeholder="font weight">
+		<input type="text" id="strfontsize1" placeholder="font size">
+		<input type="text" id="strfontfamily1" placeholder="font family">
+		<input type="text" id="strmessagetext1" placeholder="Write Something">
+
+		<input type="text" id="strfontcolor2" placeholder="font color">
+		<input type="text" id="strfontweight2" placeholder="font weight">
+		<input type="text" id="strfontsize2" placeholder="font size">
+		<input type="text" id="strfontfamily2" placeholder="font family">
+		<input type="text" id="strmessagetext2" placeholder="Write Something">
+
+		<input type="text" id="strfontcolor3" placeholder="font color">
+		<input type="text" id="strfontweight3" placeholder="font weight">
+		<input type="text" id="strfontsize3" placeholder="font size">
+		<input type="text" id="strfontfamily3" placeholder="font family">
+		<input type="text" id="strmessagetext3" placeholder="Write Something">
+
+		<input type="text" id="strfontcolor4" placeholder="font color">
+		<input type="text" id="strfontweight4" placeholder="font weight">
+		<input type="text" id="strfontsize4" placeholder="font size">
+		<input type="text" id="strfontfamily4" placeholder="font family">
+		<input type="text" id="strmessagetext4" placeholder="Write Something">
+
+
+		<button type="submit" id="strtup" onmousedown="strtUp()" onmouseup="strtStopUp()">strtup</button>
+		<button type="submit" id="strtright" onmousedown="strtRight()" onmouseup="strtStopRight()">strtright</button>
+		<button type="submit" id="strtdown" onmousedown="strtDown()" onmouseup="strtStopDown()">strtdown</button>
+		<button type="submit" id="strtleft" onmousedown="strtLeft()" onmouseup="strtStopLeft()">strtleft</button>
+
+		<button type="submit" id="strtup1" onmousedown="strtUp1()" onmouseup="strtStopUp1()">strtup</button>
+		<button type="submit" id="strtright1" onmousedown="strtRight1()" onmouseup="strtStopRight1()">strtright</button>
+		<button type="submit" id="strtdown1" onmousedown="strtDown1()" onmouseup="strtStopDown1()">strtdown</button>
+		<button type="submit" id="strtleft1" onmousedown="strtLeft1()" onmouseup="strtStopLeft1()">strtleft</button>
+
+		<button type="submit" id="strtup2" onmousedown="strtUp2()" onmouseup="strtStopUp2()">strtup</button>
+		<button type="submit" id="strtright2" onmousedown="strtRight2()" onmouseup="strtStopRight2()">strtright</button>
+		<button type="submit" id="strtdown2" onmousedown="strtDown2()" onmouseup="strtStopDown2()">strtdown</button>
+		<button type="submit" id="strtleft2" onmousedown="strtLeft2()" onmouseup="strtStopLeft2()">strtleft</button>
+
+		<button type="submit" id="strtup3" onmousedown="strtUp3()" onmouseup="strtStopUp3()">strtup</button>
+		<button type="submit" id="strtright3" onmousedown="strtRight3()" onmouseup="strtStopRight3()">strtright</button>
+		<button type="submit" id="strtdown3" onmousedown="strtDown3()" onmouseup="strtStopDown3()">strtdown</button>
+		<button type="submit" id="strtleft3" onmousedown="strtLeft3()" onmouseup="strtStopLeft3()">strtleft</button>
+
+		<button type="submit" id="strtup4" onmousedown="strtUp4()" onmouseup="strtStopUp4()">strtup</button>
+		<button type="submit" id="strtright4" onmousedown="strtRight4()" onmouseup="strtStopRight4()">strtright</button>
+		<button type="submit" id="strtdown4" onmousedown="strtDown4()" onmouseup="strtStopDown4()">strtdown</button>
+		<button type="submit" id="strtleft4" onmousedown="strtLeft4()" onmouseup="strtStopLeft4()">strtleft</button>
+
+	</div>
+	
+	<div id="strokeCircleButtons">
+		<input type="text" id="strccolor" placeholder="strc color">
+		<input type="text" id="strccolor1" placeholder="strc color">
+		<input type="text" id="strccolor2" placeholder="strc color">
+		<input type="text" id="strccolor3" placeholder="strc color">
+		<input type="text" id="strccolor4" placeholder="strc color">
+
+		<input type="text" id="strclinewidth" placeholder="strc width">
+		<input type="text" id="strclinewidt1" placeholder="strc width">
+		<input type="text" id="strclinewidt2" placeholder="strc width">
+		<input type="text" id="strclinewidt3" placeholder="strc width">
+		<input type="text" id="strclinewidt4" placeholder="strc width">
+
+		<input type="text" id="strctransparency" placeholder="strc transparency">
+		<input type="text" id="strctransparency1" placeholder="strc transparency">
+		<input type="text" id="strctransparency2" placeholder="strc transparency">
+		<input type="text" id="strctransparency3" placeholder="strc transparency">
+		<input type="text" id="strctransparency4" placeholder="strc transparency">
+
+		<input type="text" id="strcradius" placeholder="strc radius">
+		<input type="text" id="strcradius1" placeholder="strc radius">
+		<input type="text" id="strcradius2" placeholder="strc radius">
+		<input type="text" id="strcradius3" placeholder="strc radius">
+		<input type="text" id="strcradius4" placeholder="strc radius">
+		
+
+		<button type="submit" id="strcup" onmousedown="strcUp()" onmouseup="strcUpStop()">strc up</button>
+		<button type="submit" id="strcright" onmousedown="strcRight()" onmouseup="strcRightStop()">strv right</button>
+		<button type="submit" id="strcdown" onmousedown="strcDown()" onmouseup="strcDownStop()">strc down</button>
+		<button type="submit" id="strcleft" onmousedown="strcLeft()" onmouseup="strcLeftStop()">strc left</button>
+
+		<button type="submit" id="strcup1" onmousedown="strcUp1()" onmouseup="strcUpStop1()">strc up</button>
+		<button type="submit" id="strcright1" onmousedown="strcRight1()" onmouseup="strcRightStop1()">strv right</button>
+		<button type="submit" id="strcdown1" onmousedown="strcDown1()" onmouseup="strcDownStop1()">strc down</button>
+		<button type="submit" id="strcleft1" onmousedown="strcLeft1()" onmouseup="strcLeftStop1()">strc left</button>
+
+		<button type="submit" id="strcup2" onmousedown="strcUp2()" onmouseup="strcUpStop2()">strc up</button>
+		<button type="submit" id="strcright2" onmousedown="strcRight2()" onmouseup="strcRightStop2()">strv right</button>
+		<button type="submit" id="strcdown2" onmousedown="strcDown2()" onmouseup="strcDownStop2()">strc down</button>
+		<button type="submit" id="strcleft2" onmousedown="strcLeft2()" onmouseup="strcLeftStop2()">strc left</button>
+
+		<button type="submit" id="strcup3" onmousedown="strcUp3()" onmouseup="strcUpStop3()">strc up</button>
+		<button type="submit" id="strcright3" onmousedown="strcRight3()" onmouseup="strcRightStop3()">strv right</button>
+		<button type="submit" id="strcdown3" onmousedown="strcDown3()" onmouseup="strcDownStop3()">strc down</button>
+		<button type="submit" id="strcleft3" onmousedown="strcLeft3()" onmouseup="strcLeftStop3()">strc left</button>
+
+		<button type="submit" id="strcup4" onmousedown="strcUp4()" onmouseup="strcUpStop4()">strc up</button>
+		<button type="submit" id="strcright4" onmousedown="strcRight4()" onmouseup="strcRightStop4()">strv right</button>
+		<button type="submit" id="strcdown4" onmousedown="strcDown4()" onmouseup="strcDownStop4()">strc down</button>
+		<button type="submit" id="strcleft4" onmousedown="strcLeft4()" onmouseup="strcLeftStop4()">strc left</button>
+
+		</div>
+
+		
+	<div id="imageButtons">
+
+
+		<button type="submit" id="imgup" onmousedown="imgUp()" onmouseup="imgupStop()">imgup</button>
+		<button type="submit" id="imgright" onmousedown="imgRight()" onmouseup="imgrightStop()">imgright</button>
+		<button type="submit" id="imgdown" onmousedown="imgDown()" onmouseup="imgdownStop()">imgdown</button>
+		<button type="submit" id="imgleft" onmousedown="imgLeft()" onmouseup="imgleftStop()">imgleft</button>
+
+		<button type="submit" id="imgup1" onmousedown="imgUp1()" onmouseup="imgupStop1()">imgup</button>
+		<button type="submit" id="imgright1" onmousedown="imgRight1()" onmouseup="imgrightStop1()">imgright</button>
+		<button type="submit" id="imgdown1" onmousedown="imgDown1()" onmouseup="imgdownStop1()">imgdown</button>
+		<button type="submit" id="imgleft1" onmousedown="imgLeft1()" onmouseup="imgleftStop1()">imgleft</button>
+
+		<button type="submit" id="imgup2" onmousedown="imgUp2()" onmouseup="imgUpStop2()">imgup</button>
+		<button type="submit" id="imgright2" onmousedown="imgRight2()" onmouseup="imgrightStop2()">imgright</button>
+		<button type="submit" id="imgdown2" onmousedown="imgDown2()" onmouseup="imgdownStop2()">imgdown</button>
+		<button type="submit" id="imgleft2" onmousedown="imgLeft2()" onmouseup="imgleftStop2()">imgleft</button>
+
+		<button type="submit" id="imgup3" onmousedown="imgUp3()" onmouseup="imgUpStop3()">imgup</button>
+		<button type="submit" id="imgright3" onmousedown="imgRight3()" onmouseup="imgrightStop3()">imgright</button>
+		<button type="submit" id="imgdown3" onmousedown="imgDown3()" onmouseup="imgdownStop3()">imgdown</button>
+		<button type="submit" id="imgleft3" onmousedown="imgLeft3()" onmouseup="imgleftStop3()">imgleft</button>
+
+		<button type="submit" id="imgup4" onmousedown="imgUp4()" onmouseup="imgUpStop4()">imgup</button>
+		<button type="submit" id="imgright4" onmousedown="imgRight4()" onmouseup="imgrightStop4()">imgright</button>
+		<button type="submit" id="imgdown4" onmousedown="imgDown4()" onmouseup="imgdownStop4()">imgdown</button>
+		<button type="submit" id="imgleft4" onmousedown="imgLeft4()" onmouseup="imgleftStop4()">imgleft</button>
+
+
+
+		<button type="submit" id="imgminH" onmousedown="imgMinH()" onmouseup="imgminHStop()">img minh</button>
+		<button type="submit" id="imgmaxW" onmousedown="imgMaxW()" onmouseup="imgmaxWStop()">img maxw</button>
+		<button type="submit" id="imgmaxH" onmousedown="imgMaxH()" onmouseup="imgmaxHStop()">img maxh</button>
+		<button type="submit" id="imgminW" onmousedown="imgMinW()" onmouseup="imgminWStop()">img minw</button>
+
+		<button type="submit" id="imgminH1" onmousedown="imgMinH1()" onmouseup="imgminHStop1()">img minh</button>
+		<button type="submit" id="imgmaxW1" onmousedown="imgMaxW1()" onmouseup="imgmaxWStop1()">img maxw</button>
+		<button type="submit" id="imgmaxH1" onmousedown="imgMaxH1()" onmouseup="imgmaxHStop1()">img maxh</button>
+		<button type="submit" id="imgminW1" onmousedown="imgMinW1()" onmouseup="imgminWStop1()">img minw</button>
+
+		<button type="submit" id="imgminH2" onmousedown="imgMinH2()" onmouseup="imgminHStop2()">img minh</button>
+		<button type="submit" id="imgmaxW2" onmousedown="imgMaxW2()" onmouseup="imgmaxWStop2()">img maxw</button>
+		<button type="submit" id="imgmaxH2" onmousedown="imgMaxH2()" onmouseup="imgmaxHStop2()">img maxh</button>
+		<button type="submit" id="imgminW2" onmousedown="imgMinW2()" onmouseup="imgminWStop2()">img minw</button>
+
+		<button type="submit" id="imgminH3" onmousedown="imgMinH3()" onmouseup="imgminHStop3()">img minh</button>
+		<button type="submit" id="imgmaxW3" onmousedown="imgMaxW3()" onmouseup="imgmaxWStop3()">img maxw</button>
+		<button type="submit" id="imgmaxH3" onmousedown="imgMaxH3()" onmouseup="imgmaxHStop3()">img maxh</button>
+		<button type="submit" id="imgminW3" onmousedown="imgMinW3()" onmouseup="imgminWStop3()">img minw</button>
+
+		<button type="submit" id="imgminH4" onmousedown="imgMinH4()" onmouseup="imgminHStop4()">img minh</button>
+		<button type="submit" id="imgmaxW4" onmousedown="imgMaxW4()" onmouseup="imgmaxWStop4()">img maxw</button>
+		<button type="submit" id="imgmaxH4" onmousedown="imgMaxH4()" onmouseup="imgmaxHStop4()">img maxh</button>
+		<button type="submit" id="imgminW4" onmousedown="imgMinW4()" onmouseup="imgminWStop4()">img minw</button>
+
+		
+
+
+
+		<input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+
+		<img src="" id="imgDisplayed">
+		<input type="file" id="file1" accept="image/*" onchange="loadImage1(event)">
+
+		<img src="" id="imgDisplayed1">
+		<input type="file" id="file2" accept="image/*" onchange="loadImage2(event)">
+
+		<img src="" id="imgDisplayed2">
+		<input type="file" id="file3" accept="image/*" onchange="loadImage3(event)">
+
+		<img src="" id="imgDisplayed3">
+		<img src="" id="imgDisplayed4"></div>
+		<input type="file" id="file4" accept="image/*" onchange="loadImage4(event)">
+
+		</div>
+
+	<div id="leftArcButtons">
+
+		<button type="submit" id="leftarclargeright" onmousedown="leftArcLargeRight()" onmouseup="leftArcLargeRightStop()">move arc right</button>
+		<button type="submit" id="leftarclargeleft" onmousedown="leftArcLargeLeft()" onmouseup="leftArcLargeLeftStop()">move arc left</button>
+		<input type="text" id="lelargecolor" placeholder="left large arc color">
+	</div>
+	
+	<div id="rightArcButtons">
+
+		<button type="submit" id="rightarclargeright" onmousedown="rightArcLargeRight()" onmouseup="rightArcLargeRightStop()">move arc right</button>
+		<button type="submit" id="rightarclargeleft" onmousedown="rightArcLargeLeft()" onmouseup="rightArcLargeLeftStop()">move arc left</button>
+		<input type="text" id="relargecolor" placeholder="right large arc color">
+	</div>
+	
+	<div id="holeSquareButtons">
+
+		<input type="text" id="csquarecolor" placeholder="circle sqr color">
+		<button type="submit" id="midsquareright" onmousedown="midSquareRight()" onmouseup="midSquareRightStop()">move cs right</button>
+		<button type="submit" id="midsquareleft" onmousedown="midSquareLeft()" onmouseup="midSquareLeftStop()">move cs left</button>
+
+		<button type="submit" id="midsquareup" onmousedown="midSquareUp()" onmouseup="midSquareUpStop()">move cs up</button>
+		<button type="submit" id="midsquaredown" onmousedown="midSquareDown()" onmouseup="midSquareDownStop()">move cs down</button>
+	</div><br>  
+
+
+		<button id="down">Download</button>
+	</div>
+
+	<script src="sublimeTest.js"></script>
+</body>
+</html>

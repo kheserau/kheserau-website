@@ -1,0 +1,33 @@
+canvas{
+
+	border: 2px solid black;
+	border-radius: 8px;
+	
+}
+div{
+	padding-top: 5px;
+	padding-left: 5px;
+	width: 400px;
+	
+	background-color: green;
+	border-radius: 8px;
+
+}
+#imgDisplayedC{
+	width: 12px;
+
+}
+#drawShapesButtons{
+	display:flex;
+    justify-content:space-between; 
+    margin:0;
+    padding:0;
+
+}
+#imgDiv{
+	display:flex;
+    justify-content:space-between; 
+    margin:0;
+    padding:0;
+
+}
