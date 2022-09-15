@@ -1,0 +1,354 @@
+*{
+	box-sizing: border-box;
+	padding: none;
+	margin: none;
+}
+#bodyDiv{
+	width: 100%;
+	justify-content: center;
+	
+	
+}
+canvas{
+	width: 95%;
+	height: 250px;
+	border: 2px solid black;
+	border-radius: 8px;
+	margin-left: 10px;
+	
+	
+}
+#drawShapesButtons{
+	margin-top: 40px;
+	padding-top: 10px;
+	justify-content: center;
+	width: 100%;
+	border-radius: 8px;
+	display:inline-flex; 
+    margin: 40;
+    padding:40;
+}
+#fillSquare{
+	
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin-left:5;
+    padding:0;
+}
+#fillSquarebuttons{
+	display: inline-block;
+	justify-content: center;
+}
+#fillsquareDropDowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+	padding-left: 130px;
+	padding-right: 130px;
+	
+}
+#fillsquaremoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#fillsquaresizeButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#fillTextDiv{
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin-left:5px;
+    padding:0;
+}
+#fillTextButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#filltextDropDowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+}
+#filltextMessage{
+	justify-content: center;
+	width: 100%;
+	padding-top: 20px;
+}
+.textmess{
+	width: 100%;
+	height: 40px;
+	padding: 6px;
+	font-size: 24px;
+	font-family: helvetica;
+}
+#filltextMoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#fillCircleDiv{
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin-left:5px;
+    padding:0;
+}
+#fillCircleButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#fillcircleDropDowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+#fillcirclemoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#strokeSquare{
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin-left:5px;
+    padding:0;
+}
+#strokeSquareButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#strokesquaredropdowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#strokesquaremoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#strokesquaresizeButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#strokeTextDiv{
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin-left:5px;
+    padding:0;
+}
+#strokeTextButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#stroketextdropDowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+}
+#stroketextmessage{
+	justify-content: center;
+	width: 100%;
+	padding-top: 20px;
+}
+.textmess{
+	width: 100%;
+	height: 40px;
+	padding: 6px;
+	font-size: 24px;
+	font-family: helvetica;
+}
+#stroketextmovebuttons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#strokecircleDiv{
+	display:inline;
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin:10;
+    padding:10;
+}
+#strokeCircleButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#strokecircledropdowns{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+#strokecirclemoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#imgDiv{
+	display:inline-flex;
+	padding-top: 10px;
+	justify-content: center;
+	width: 100%;
+	border-radius: 8px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+#imageDiv{
+	display:inline;
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin:10;
+    padding:10;
+}
+#imageButtons{
+	display: inline-block;
+	justify-content: center;
+}
+#imagemoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+}
+#imagesizeButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+}
+#imagefileButtons{
+	justify-content: center;
+	width: 100%;
+	padding-top: 20px;
+}
+#leftArcDiv{
+	display:inline;
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin:10;
+    padding:10;
+}
+#leftarcmoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+}
+#righhtArcDiv{
+	display:inline;
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin:10;
+    padding:10;
+}
+#rightarcmoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 40px;
+}
+#holeSquareDiv{
+	display:inline;
+	padding-top: 10px;
+	justify-content: center;
+	width: 25%;
+	margin:10;
+    padding:10;
+}
+#holesquarecolor{
+	display: inline-flex;
+	justify-content: left;
+	width: 100%;
+	padding-top: 40px;
+}
+#holesquaremoveButtons{
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 25px;
+}
+#imgDisplayedC{
+	width: 12px;
+}
+.num{
+	width:50px;
+	font-size: 20px;
+	font-family: "helvetica";
+	border-radius: 8px;
+	outline: none;
+	border: none;
+	background-color: lightblue;
+	margin: 1px;
+
+}
+.cWidth{
+	width:55px;
+	font-size: 20px;
+	font-family: "helvetica";
+	border-radius: 8px;
+	outline: none;
+	border: none;
+	background-color: lightblue;
+	margin: 1px;
+}
+button{
+	height: 40px;
+	font-size: 20px;
+	font-family: helvetica;
+	font-weight: bold;
+	color: floralwhite;
+	background-color: deepskyblue;
+	border-radius: 15px;
+	outline: none;
+	border: none;
+}
+#down{
+	margin-top: 50px;
+}
+.dropdownsStyle{
+	height: 40px;
+	padding: 6px;
+	font-size: 20px;
+	font-family: "helvetica";
+	border-radius: 8px;
+	outline: none;
+	border: none;
+	background-color: lightblue;
+	margin: 1px;
+
+}
+#colors{
+	width: 104px;
+}
