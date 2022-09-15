@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sublimeTest</title>
+	<link rel="stylesheet" href="sublimeTest.css">
+</head>
+<body>
+	<div id="bodyDiv">
+	<canvas id="canvas"></canvas><br>
+	<div>
+		<div id="drawShapesButtons">
+
+		<div id="fillSquare">
+		
+		<button type="submit" id="submitDraw" onclick="update()"> P-S5</button>
+		<button type="submit" id="submitDraw1" onclick="update1()"> P-S4</button>
+		<button type="submit" id="submitDraw2" onclick="update2()"> P-S3</button>
+		<button type="submit" id="submitDraw3" onclick="update3()"> P-S2</button>
+		<button type="submit" id="submitDraw4" onclick="update4()"> P-S1</button>
+	</div>
+	<div id="fillTextDiv">
+		<button type="submit" id="write" onclick="Writing()">P-T5</button>
+		<button type="submit" id="write1" onclick="Writing1()">P-T4</button>
+		<button type="submit" id="write2" onclick="Writing2()">P-T3</button>
+		<button type="submit" id="write3" onclick="Writing3()">P-T2</button>
+		<button type="submit" id="write4" onclick="Writing4()">P-T1</button><br>
+	</div>
+	<div id="fillCircleDiv">
+		<button type="submit" id="makecircle" onclick="makeCircle()">P-C5</button>
+		<button type="submit" id="makecircle1" onclick="makeCircle1()">P-C4</button>
+		<button type="submit" id="makecircle2" onclick="makeCircle2()">P-C3</button>
+		<button type="submit" id="makecircle3" onclick="makeCircle3()">P-C2</button>
+		<button type="submit" id="makecircle4" onclick="makeCircle4()">P-C1</button>
+	</div>
+	<div id="strokeSquare">
+
+		<button type="submit" id="strokesquare" onclick="strokeSquare()">D-S5</button>
+		<button type="submit" id="strokesquare1" onclick="strokeSquare1()">D-S4</button>
+		<button type="submit" id="strokesquare2" onclick="strokeSquare2()">D-S3</button>
+		<button type="submit" id="strokesquare3" onclick="strokeSquare3()">D-S2</button>
+		<button type="submit" id="strokesquare4" onclick="strokeSquare4()">D-S1</button>
+	</div>
+	<div id="strokeTextDiv">
+		<button tyype="submit" id="strtdraw" onclick="strtDraw()">D-T5</button>
+		<button tyype="submit" id="strtdraw1" onclick="strtDraw1()">D-T4</button>
+		<button tyype="submit" id="strtdraw2" onclick="strtDraw2()">D-T3</button>
+		<button tyype="submit" id="strtdraw3" onclick="strtDraw3()">D-T2</button>
+		<button tyype="submit" id="strtdraw4" onclick="strtDraw4()">D-T1</button>
+	</div>
+	
+	</div>
+	<div id="imgDiv">
+	<div id="strokecircleDiv">
+		<button type="submit" id="strcircle" onclick="strCircle()">D-C5</button>
+		<button type="submit" id="strcircle1" onclick="strCircle1()">D-C4</button>
+		<button type="submit" id="strcircle2" onclick="strCircle2()">D-C3</button>
+		<button type="submit" id="strcircle3" onclick="strCircle3()">D-C2</button>
+		<button type="submit" id="strcircle4" onclick="strCircle4()">D-C1</button>
+	</div>
+	<div id="leftArcDiv">
+		<button type="submit" id="leftarclarge" onclick="leftArcLarge()">L-A</button>
+	</div>
+	<div Id="righhtArcDiv">
+
+		<button type="submit" id="rightarclarge" onclick="rightArcLarge()">R-A</button>
+	</div>
+	<div id="holeSquareDiv"> 
+
+		<button type="submit" id="holesquare" onclick="holeSquare()">C-S</button>
+	</div>
+	<div id="imageDiv">
+		<button type="submit" id="imgmake" onclick="imgMake()">IMG5</button>
+		<button type="submit" id="imgmake1" onclick="imgMake1()">IMG4</button>
+		<button type="submit" id="imgmake2" onclick="imgMake2()">IMG3</button>
+		<button type="submit" id="imgmake3" onclick="imgMake3()">IMG2</button>
+		<button type="submit" id="imgmake4" onclick="imgMake4()">IMG1</button>
+	</div>
+	</div>
+	<div id="fillSquarebuttons">
+		<div id="fillsquareDropDowns">
+
+		<input type="color" class="dropdownsStyle" id="colors" placeholder="write color">
+		<input type="color" class="dropdownsStyle" id="colors1" placeholder="write color">
+		<input type="color" class="dropdownsStyle" id="colors2" placeholder="write color">
+		<input type="color" class="dropdownsStyle" id="colors3" placeholder="write color">
+		<input type="color" class="dropdownsStyle" id="colors4" placeholder="write color">
+
+		<select id="sqTrans" class="dropdownsStyle" onchange="paintSquareTrans()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="sqTrans1" class="dropdownsStyle" onchange="paintSquareTrans1()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="sqTrans2" class="dropdownsStyle" onchange="paintSquareTrans2()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="sqTrans3" class="dropdownsStyle" onchange="paintSquareTrans3()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="sqTrans4" class="dropdownsStyle" onchange="paintSquareTrans4()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+	</div>
+	<div id="fillsquaremoveButtons">
+
+		<button type="submit" id="move">up</button>
+		<button type="submit" id="move1">right</button>
+		<button type="submit" id="move2">down</button>
+		<button type="submit" id="move3">left</button>
+
+
+		<button type="submit" id="moveA1">up</button>
+		<button type="submit" id="moveA2">right</button>
+		<button type="submit" id="moveA3">down</button>
+		<button type="submit" id="moveA4">left</button>
+
+		<button type="submit" id="moveB1">up</button>
+		<button type="submit" id="moveB2">right</button>
+		<button type="submit" id="moveB3">down</button>
+		<button type="submit" id="moveB4">left</button>
+
+		<button type="submit" id="moveC1">up</button>
+		<button type="submit" id="moveC2">right</button>
+		<button type="submit" id="moveC3">down</button>
+		<button type="submit" id="moveC4">left</button>
+
+		<button type="submit" id="moveD1">up</button>
+		<button type="submit" id="moveD2">right</button>
+		<button type="submit" id="moveD3">down</button>
+		<button type="submit" id="moveD4">left</button>
+	</div>
+	<div id="fillsquaresizeButtons">
+		
+		<button type="submit" id="increase1">minH</button>
+		<button type="submit" id="increase2">maxW</button>
+		<button type="submit" id="increase3">maxH</button>
+		<button type="submit" id="increase4">minW</button>
+
+		<button type="submit" id="increaseA1">minH</button>
+		<button type="submit" id="increaseA2">maxW</button>
+		<button type="submit" id="increaseA3">maxH</button>
+		<button type="submit" id="increaseA4">minW</button>
+
+		<button type="submit" id="increaseB1">minH</button>
+		<button type="submit" id="increaseB2">maxW</button>
+		<button type="submit" id="increaseB3">maxH</button>
+		<button type="submit" id="increaseB4">minW</button>
+
+		<button type="submit" id="increaseC1">minH</button>
+		<button type="submit" id="increaseC2">maxW</button>
+		<button type="submit" id="increaseC3">maxH</button>
+		<button type="submit" id="increaseC4">minW</button>
+
+		<button type="submit" id="increaseD1">minH</button>
+		<button type="submit" id="increaseD2">maxW</button>
+		<button type="submit" id="increaseD3">maxH</button>
+		<button type="submit" id="increaseD4">minW</button>
+	</div>
+	</div>
+
+	
+	<div id="fillTextButtons">
+		<div id="filltextDropDowns">
+
+		<select id="txtTrans" class="dropdownsStyle" onchange="paintTextTrans()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="txtTrans1" class="dropdownsStyle" onchange="paintTextTrans1()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="txtTrans2" class="dropdownsStyle" onchange="paintTextTrans2()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="txtTrans3" class="dropdownsStyle" onchange="paintTextTrans3()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="txtTrans4" class="dropdownsStyle" onchange="paintTextTrans4()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+
+
+		<input type="color" class="dropdownsStyle" id="fontcolor" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="fontcolor1" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="fontcolor2" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="fontcolor3" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="fontcolor4" placeholder="font color">
+
+		<select id="fontweight" class="dropdownsStyle" onchange="paintTextFontWeight()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="fontweight1" class="dropdownsStyle" onchange="paintTextFontWeight1()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="fontweight2" class="dropdownsStyle" onchange="paintTextFontWeight2()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="fontweight3" class="dropdownsStyle" onchange="paintTextFontWeight3()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="fontweight4" class="dropdownsStyle" onchange="paintTextFontWeight4()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+
+		<input type="number" class="num" id="fontsize" placeholder="size">
+		<input type="number" class="num" id="fontsize1" placeholder="size">
+		<input type="number" class="num" id="fontsize2" placeholder="size">
+		<input type="number" class="num" id="fontsize3" placeholder="size">
+		<input type="number" class="num" id="fontsize4" placeholder="size">
+
+		<select id="fontfamily" class="dropdownsStyle" onchange="paintTextFontFamily()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="fontfamily1" class="dropdownsStyle" onchange="paintTextFontFamily1()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="fontfamily2" class="dropdownsStyle" onchange="paintTextFontFamily2()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="fontfamily3" class="dropdownsStyle" onchange="paintTextFontFamily3()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="fontfamily4" class="dropdownsStyle" onchange="paintTextFontFamily4()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+	</div>
+	<div id="filltextMessage">
+
+		<input type="text" class="textmess" id="messagetext" placeholder="Write Something">
+		<input type="text" class="textmess" id="messagetext1" placeholder="Write Something">
+		<input type="text" class="textmess" id="messagetext2" placeholder="Write Something">
+		<input type="text" class="textmess" id="messagetext3" placeholder="Write Something">
+		<input type="text" class="textmess" id="messagetext4" placeholder="Write Something">
+	</div>
+	<div id="filltextMoveButtons">
+
+		<button type="submit" id="writeLeft">textleft</button>
+		<button type="submit" id="writeUp">textup</button>
+		<button type="submit" id="writeRight">textright</button>
+		<button type="submit" id="writeBotton">textbottom</button>
+
+		<button type="submit" id="writeLeft1">textleft</button>
+		<button type="submit" id="writeUp1">textup</button>
+		<button type="submit" id="writeRight1">textright</button>
+		<button type="submit" id="writeBotton1">textbottom</button>
+
+		<button type="submit" id="writeLeft2">textleft</button>
+		<button type="submit" id="writeUp2">textup</button>
+		<button type="submit" id="writeRight2">textright</button>
+		<button type="submit" id="writeBotton2">textbottom</button>
+
+		<button type="submit" id="writeLeft3">textleft</button>
+		<button type="submit" id="writeUp3">textup</button>
+		<button type="submit" id="writeRight3">textright</button>
+		<button type="submit" id="writeBotton3">textbottom</button>
+
+		<button type="submit" id="writeLeft4">textleft</button>
+		<button type="submit" id="writeUp4">textup</button>
+		<button type="submit" id="writeRight4">textright</button>
+		<button type="submit" id="writeBotton4">textbottom</button>
+	</div>
+	</div>
+	
+	<div id="fillCircleButtons">
+		<div id="fillcircleDropDowns">
+		<input type="color" class="dropdownsStyle" id="circleColor" placeholder="color">
+		<input type="color" class="dropdownsStyle" id="circleColor1" placeholder="color">
+		<input type="color" class="dropdownsStyle" id="circleColor2" placeholder="color">
+		<input type="color" class="dropdownsStyle" id="circleColor3" placeholder="color">
+		<input type="color" class="dropdownsStyle" id="circleColor4" placeholder="color">
+
+		<input type="number" class="num" id="circleSize" placeholder="size">
+		<input type="number" class="num" id="circleSize1" placeholder="size">
+		<input type="number" class="num" id="circleSize2" placeholder="size">
+		<input type="number" class="num" id="circleSize3" placeholder="size">
+		<input type="number" class="num" id="circleSize4" placeholder="size">
+
+		<select id="circleTrans" class="dropdownsStyle" onchange="paintCircleTrans()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="circleTrans1" class="dropdownsStyle" onchange="paintCircleTrans1()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="circleTrans2" class="dropdownsStyle" onchange="paintCircleTrans2()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="circleTrans3" class="dropdownsStyle" onchange="paintCircleTrans3()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="circleTrans4" class="dropdownsStyle" onchange="paintCircleTrans4()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+	</div>
+	<div id="fillcirclemoveButtons">
+
+		<button type="submit" id="circleup">c up</button>
+		<button type="submit" id="circleright">c right</button>
+		<button type="submit" id="circledown">c down</button>
+		<button type="submit" id="circleleft">c left</button>
+
+		<button type="submit" id="circleup1">c up</button>
+		<button type="submit" id="circleright1">c right</button>
+		<button type="submit" id="circledown1">c down</button>
+		<button type="submit" id="circleleft1">c left</button>
+
+		<button type="submit" id="circleup2">c up</button>
+		<button type="submit" id="circleright2">c right</button>
+		<button type="submit" id="circledown2">c down</button>
+		<button type="submit" id="circleleft2">c left</button>
+
+		<button type="submit" id="circleup3">c up</button>
+		<button type="submit" id="circleright3">c right</button>
+		<button type="submit" id="circledown3">c down</button>
+		<button type="submit" id="circleleft3">c left</button>
+
+		<button type="submit" id="circleup4">c up</button>
+		<button type="submit" id="circleright4">c right</button>
+		<button type="submit" id="circledown4">c down</button>
+		<button type="submit" id="circleleft4">c left</button>
+	</div>
+
+		</div>
+		
+	<div id="strokeSquareButtons">
+		<div id="strokesquaredropdowns">
+
+		<input type="color" class="dropdownsStyle" id="stsqcolor" placeholder="set color">
+		<input type="color" class="dropdownsStyle" id="stsqcolor1" placeholder="set color">
+		<input type="color" class="dropdownsStyle" id="stsqcolor2" placeholder="set color">
+		<input type="color" class="dropdownsStyle" id="stsqcolor3" placeholder="set color">
+		<input type="color" class="dropdownsStyle" id="stsqcolor4" placeholder="set color">
+
+		<input type="number" class="cWidth" id="stsqwidth" placeholder="width">
+		<input type="number" class="cWidth" id="stsqwidth1" placeholder="width">
+		<input type="number" class="cWidth" id="stsqwidth2" placeholder="width">
+		<input type="number" class="cWidth" id="stsqwidth3" placeholder="width">
+		<input type="number" class="cWidth" id="stsqwidth4" placeholder="width">
+
+		<select id="stsqtrans" class="dropdownsStyle" onchange="paintSquareTrans()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="stsqtrans1" class="dropdownsStyle" onchange="paintSquareTrans1()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="stsqtrans2" class="dropdownsStyle" onchange="paintSquareTrans2()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="stsqtrans3" class="dropdownsStyle" onchange="paintSquareTrans3()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="stsqtrans4" class="dropdownsStyle" onchange="paintSquareTrans4()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+	</div>
+	<div id="strokesquaremoveButtons">
+
+		<button type="submit" id="stsqup">up</button>
+		<button type="submit" id="stsqright">right</button>
+		<button type="submit" id="stsqdown">down</button>
+		<button type="submit" id="stsqleft">left</button>
+
+		<button type="submit" id="stsqup1">up</button>
+		<button type="submit" id="stsqright1">right</button>
+		<button type="submit" id="stsqdown1">down</button>
+		<button type="submit" id="stsqleft1">left</button>
+
+		<button type="submit" id="stsqup2">up</button>
+		<button type="submit" id="stsqright2">right</button>
+		<button type="submit" id="stsqdown2">down</button>
+		<button type="submit" id="stsqleft2">left</button>
+
+		<button type="submit" id="stsqup3">up</button>
+		<button type="submit" id="stsqright3">right</button>
+		<button type="submit" id="stsqdown3">down</button>
+		<button type="submit" id="stsqleft3">left</button>
+
+		<button type="submit" id="stsqup4">up</button>
+		<button type="submit" id="stsqright4">right</button>
+		<button type="submit" id="stsqdown4">down</button>
+		<button type="submit" id="stsqleft4">left</button>
+	</div>
+	<div id="strokesquaresizeButtons">
+
+
+		<button type="submit" id="stsqminh">minH</button>
+		<button type="submit" id="stsqmaxw">maxW</button>
+		<button type="submit" id="stsqmaxh">maxH</button>
+		<button type="submit" id="stsqminw">minW</button>
+		
+		<button type="submit" id="stsqminh1">minH</button>
+		<button type="submit" id="stsqmaxw1">maxW</button>
+		<button type="submit" id="stsqmaxh1">maxH</button>
+		<button type="submit" id="stsqminw1">minW</button>
+
+		<button type="submit" id="stsqminh2">minH</button>
+		<button type="submit" id="stsqmaxw2">maxW</button>
+		<button type="submit" id="stsqmaxh2">maxH</button>
+		<button type="submit" id="stsqminw2">minW</button>
+
+		<button type="submit" id="stsqminh3">minH</button>
+		<button type="submit" id="stsqmaxw3">maxW</button>
+		<button type="submit" id="stsqmaxh3">maxH</button>
+		<button type="submit" id="stsqminw3">minW</button>
+
+		<button type="submit" id="stsqminh4">minH</button>
+		<button type="submit" id="stsqmaxw4">maxW</button>
+		<button type="submit" id="stsqmaxh4">maxH</button>
+		<button type="submit" id="stsqminw4">minW</button>
+	</div>
+
+		</div>
+		
+	<div id="strokeTextButtons">
+		<div id="stroketextdropDowns">
+
+		<input type="color" class="dropdownsStyle" id="strfontcolor" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="strfontcolor1" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="strfontcolor2" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="strfontcolor3" placeholder="font color">
+		<input type="color" class="dropdownsStyle" id="strfontcolor4" placeholder="font color">
+
+		<select id="strfontweight" class="dropdownsStyle" onchange="paintTextFontWeight()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="strfontweight1" class="dropdownsStyle" onchange="paintTextFontWeight1()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="strfontweight2" class="dropdownsStyle" onchange="paintTextFontWeight2()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="strfontweight3" class="dropdownsStyle" onchange="paintTextFontWeight3()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+		<select id="strfontweight4" class="dropdownsStyle" onchange="paintTextFontWeight4()">
+			<option>normal</option>
+			<option>bold</option>
+			<option>italic</option>
+		</select>
+
+		<input type="number" class="num" id="strfontsize" placeholder="size">
+		<input type="number" class="num" id="strfontsize1" placeholder="size">
+		<input type="number" class="num" id="strfontsize2" placeholder="size">
+		<input type="number" class="num" id="strfontsize3" placeholder="size">
+		<input type="number" class="num" id="strfontsize4" placeholder="size">
+
+		<select id="strfontfamily" class="dropdownsStyle" onchange="paintTextFontFamily()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="strfontfamily1" class="dropdownsStyle" onchange="paintTextFontFamily1()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="strfontfamily2" class="dropdownsStyle" onchange="paintTextFontFamily2()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="strfontfamily3" class="dropdownsStyle" onchange="paintTextFontFamily3()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+		<select id="strfontfamily4" class="dropdownsStyle" onchange="paintTextFontFamily4()">
+			<option>sans-serif</option>
+			<option>monospace</option>
+			<option>helvetica</option>
+			<option>arial</option>
+		</select>
+	</div>
+	<div id="stroketextmessage">
+
+		<input type="text" class="textmess" id="strmessagetext" placeholder="Write Something">
+		<input type="text" class="textmess" id="strmessagetext1" placeholder="Write Something">
+		<input type="text" class="textmess" id="strmessagetext2" placeholder="Write Something">
+		<input type="text" class="textmess" id="strmessagetext3" placeholder="Write Something">
+		<input type="text" class="textmess" id="strmessagetext4" placeholder="Write Something">
+	</div>
+	<div id="stroketextmovebuttons">
+
+
+		<button type="submit" id="strtup">strtup</button>
+		<button type="submit" id="strtright">strtright</button>
+		<button type="submit" id="strtdown">strtdown</button>
+		<button type="submit" id="strtleft">strtleft</button>
+
+		<button type="submit" id="strtup1">strtup</button>
+		<button type="submit" id="strtright1">strtright</button>
+		<button type="submit" id="strtdown1">strtdown</button>
+		<button type="submit" id="strtleft1">strtleft</button>
+
+		<button type="submit" id="strtup2">strtup</button>
+		<button type="submit" id="strtright2">strtright</button>
+		<button type="submit" id="strtdown2">strtdown</button>
+		<button type="submit" id="strtleft2">strtleft</button>
+
+		<button type="submit" id="strtup3">strtup</button>
+		<button type="submit" id="strtright3">strtright</button>
+		<button type="submit" id="strtdown3">strtdown</button>
+		<button type="submit" id="strtleft3">strtleft</button>
+
+		<button type="submit" id="strtup4">strtup</button>
+		<button type="submit" id="strtright4">strtright</button>
+		<button type="submit" id="strtdown4">strtdown</button>
+		<button type="submit" id="strtleft4">strtleft</button>
+	</div>
+
+	</div>
+	
+	<div id="strokeCircleButtons">
+		<div id="strokecircledropdowns">
+		<input type="color" class="dropdownsStyle" id="strccolor" placeholder="strc color">
+		<input type="color" class="dropdownsStyle" id="strccolor1" placeholder="strc color">
+		<input type="color" class="dropdownsStyle" id="strccolor2" placeholder="strc color">
+		<input type="color" class="dropdownsStyle" id="strccolor3" placeholder="strc color">
+		<input type="color" class="dropdownsStyle" id="strccolor4" placeholder="strc color">
+
+		<input type="number" class="cWidth" id="strclinewidth" placeholder="width">
+		<input type="number" class="cWidth" id="strclinewidt1" placeholder="width">
+		<input type="number" class="cWidth" id="strclinewidt2" placeholder="width">
+		<input type="number" class="cWidth" id="strclinewidt3" placeholder="width">
+		<input type="number" class="cWidth" id="strclinewidt4" placeholder="width">
+
+		<select id="strctransparency" class="dropdownsStyle" onchange="paintCircleTrans()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="strctransparency1" class="dropdownsStyle" onchange="paintCircleTrans1()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="strctransparency2" class="dropdownsStyle" onchange="paintCircleTrans2()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="strctransparency3" class="dropdownsStyle" onchange="paintCircleTrans3()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+		<select id="strctransparency4" class="dropdownsStyle" onchange="paintCircleTrans4()">
+			<option>1</option>
+			<option>0.2</option>
+			<option>0.3</option>
+			<option>0.4</option>
+			<option>0.6</option>
+			<option>0.7</option>
+			<option>0.8</option>
+		</select>
+
+		<input type="number" class="num"  id="strcradius" placeholder="size">
+		<input type="number" class="num" id="strcradius1" placeholder="size">
+		<input type="number" class="num" id="strcradius2" placeholder="size">
+		<input type="number" class="num" id="strcradius3" placeholder="size">
+		<input type="number" class="num" id="strcradius4" placeholder="size">
+		</div>
+		<div id="strokecirclemoveButtons">
+
+		<button type="submit" id="strcup">up</button>
+		<button type="submit" id="strcright">right</button>
+		<button type="submit" id="strcdown">down</button>
+		<button type="submit" id="strcleft">left</button>
+
+		<button type="submit" id="strcup1">up</button>
+		<button type="submit" id="strcright1">right</button>
+		<button type="submit" id="strcdown1">down</button>
+		<button type="submit" id="strcleft1">left</button>
+
+		<button type="submit" id="strcup2">up</button>
+		<button type="submit" id="strcright2">right</button>
+		<button type="submit" id="strcdown2">down</button>
+		<button type="submit" id="strcleft2">left</button>
+
+		<button type="submit" id="strcup3">up</button>
+		<button type="submit" id="strcright3">right</button>
+		<button type="submit" id="strcdown3">down</button>
+		<button type="submit" id="strcleft3">left</button>
+
+		<button type="submit" id="strcup4">up</button>
+		<button type="submit" id="strcright4">right</button>
+		<button type="submit" id="strcdown4">down</button>
+		<button type="submit" id="strcleft4">left</button>
+	</div>
+		</div>
+
+		
+	<div id="imageButtons">
+		<div id="imagemoveButtons">
+
+
+		<button type="submit" id="imgup">up</button>
+		<button type="submit" id="imgright">right</button>
+		<button type="submit" id="imgdown">down</button>
+		<button type="submit" id="imgleft">left</button>
+
+		<button type="submit" id="imgup1">up</button>
+		<button type="submit" id="imgright1">right</button>
+		<button type="submit" id="imgdown1">down</button>
+		<button type="submit" id="imgleft1">left</button>
+
+		<button type="submit" id="imgup2">up</button>
+		<button type="submit" id="imgright2">right</button>
+		<button type="submit" id="imgdown2">down</button>
+		<button type="submit" id="imgleft2">left</button>
+
+		<button type="submit" id="imgup3">up</button>
+		<button type="submit" id="imgright3">right</button>
+		<button type="submit" id="imgdown3">down</button>
+		<button type="submit" id="imgleft3">left</button>
+
+		<button type="submit" id="imgup4">up</button>
+		<button type="submit" id="imgright4">right</button>
+		<button type="submit" id="imgdown4">down</button>
+		<button type="submit" id="imgleft4">left</button>
+	</div>
+	<div id="imagesizeButtons">
+
+
+
+		<button type="submit" id="imgminH">minh</button>
+		<button type="submit" id="imgmaxW">maxw</button>
+		<button type="submit" id="imgmaxH">maxh</button>
+		<button type="submit" id="imgminW">minw</button>
+
+		<button type="submit" id="imgminH1">minh</button>
+		<button type="submit" id="imgmaxW1">maxw</button>
+		<button type="submit" id="imgmaxH1">maxh</button>
+		<button type="submit" id="imgminW1">minw</button>
+
+		<button type="submit" id="imgminH2">minh</button>
+		<button type="submit" id="imgmaxW2">maxw</button>
+		<button type="submit" id="imgmaxH2">maxh</button>
+		<button type="submit" id="imgminW2">minw</button>
+
+		<button type="submit" id="imgminH3">minh</button>
+		<button type="submit" id="imgmaxW3">maxw</button>
+		<button type="submit" id="imgmaxH3">maxh</button>
+		<button type="submit" id="imgminW3">minw</button>
+
+		<button type="submit" id="imgminH4">minh</button>
+		<button type="submit" id="imgmaxW4">maxw</button>
+		<button type="submit" id="imgmaxH4">maxh</button>
+		<button type="submit" id="imgminW4">minw</button>
+	</div>
+	<div id="imagefileButtons">
+
+		<input type="file" class="textmess" id="file" accept="image/*" onchange="loadImage(event)">
+
+		<img src="" id="imgDisplayed">
+		<input type="file" class="textmess" id="file1" accept="image/*" onchange="loadImage1(event)">
+
+		<img src="" id="imgDisplayed1">
+		<input type="file" class="textmess" id="file2" accept="image/*" onchange="loadImage2(event)">
+
+		<img src="" id="imgDisplayed2">
+		<input type="file" class="textmess" id="file3" accept="image/*" onchange="loadImage3(event)">
+
+		<img src="" id="imgDisplayed3">
+		<img src="" id="imgDisplayed4">
+		<input type="file" class="textmess" id="file4" accept="image/*" onchange="
+		loadImage4(event)">
+	</div>
+
+		</div>
+
+	<div id="leftArcButtons">
+		<div id="leftarcmoveButtons">
+
+		<button type="submit" id="leftarclargeright">move arc right</button>
+		<button type="submit" id="leftarclargeleft">move arc left</button>
+		<input type="color" class="dropdownsStyle" id="lelargecolor" placeholder="left large arc color">
+	</div>
+	</div>
+	
+	<div id="rightArcButtons">
+		<div id="rightarcmoveButtons">
+
+		<button type="submit" id="rightarclargeright">move arc right</button>
+		<button type="submit" id="rightarclargeleft">move arc left</button>
+		<input type="color" class="dropdownsStyle" id="relargecolor" placeholder="right large arc color">
+	</div>
+	</div>
+	
+	<div id="holeSquareButtons">
+		<div id="holesquarecolor">
+
+		<input type="color" class="dropdownsStyle"  id="csquarecolor" placeholder="circle sqr color">
+	</div>
+	<div id="holesquaremoveButtons">
+		<button type="submit" id="midsquareright">right</button>
+		<button type="submit" id="midsquareleft">left</button>
+
+		<button type="submit" id="midsquareup">up</button>
+		<button type="submit" id="midsquaredown">down</button>
+	</div>
+	</div>  
+
+
+		<button id="down">Download</button>
+	</div>
+
+	<script src="sublimeTest.js"></script>
+	<div>
+</body>
+</html>
