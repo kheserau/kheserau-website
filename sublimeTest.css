@@ -25,8 +25,9 @@ canvas{
 	width: 100%;
 	border-radius: 8px;
 	display:inline-flex; 
-    margin: 40;
-    padding:40;
+   	margin: 40;
+    	padding:40;
+	touch-action:none;
 }
 #fillSquare{
 	
@@ -34,11 +35,13 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin-left:5;
-    padding:0;
+    	padding:0;
+	touch-action: none;
 }
 #fillSquarebuttons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #fillsquareDropDowns{
 	display: inline-flex;
@@ -47,6 +50,7 @@ canvas{
 	padding-top: 40px;
 	padding-left: 130px;
 	padding-right: 130px;
+	touch-action: none;
 	
 }
 #fillsquaremoveButtons{
@@ -54,34 +58,41 @@ canvas{
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #fillsquaresizeButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #fillTextDiv{
 	padding-top: 10px;
 	justify-content: center;
 	width: 25%;
 	margin-left:5px;
-    padding:0;
+    	padding:0;
+	touch-action: none;
 }
 #fillTextButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
+	
 }
 #filltextDropDowns{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 40px;
+	touch-action: none;
 }
 #filltextMessage{
 	justify-content: center;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 .textmess{
 	width: 100%;
@@ -95,17 +106,20 @@ canvas{
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #fillCircleDiv{
 	padding-top: 10px;
 	justify-content: center;
 	width: 25%;
 	margin-left:5px;
-    padding:0;
+    	padding:0;
+	touch-action: none;
 }
 #fillCircleButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #fillcircleDropDowns{
 	display: inline-flex;
@@ -114,23 +128,27 @@ canvas{
 	padding-top: 40px;
 	padding-right: 50px;
 	padding-left: 50px;
+	touch-action: none;
 }
 #fillcirclemoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #strokeSquare{
 	padding-top: 10px;
 	justify-content: center;
 	width: 25%;
 	margin-left:5px;
-    padding:0;
+    	padding:0;
+	touch-action: none;
 }
 #strokeSquareButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #strokesquaredropdowns{
 	display: inline-flex;
@@ -139,40 +157,47 @@ canvas{
 	padding-top: 40px;
 	padding-left: 50px;
 	padding-right: 50px;
+	touch-action: none;
 }
 #strokesquaremoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #strokesquaresizeButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #strokeTextDiv{
 	padding-top: 10px;
 	justify-content: center;
 	width: 25%;
 	margin-left:5px;
-    padding:0;
+    	padding:0;
+	touch-action: none;
 }
 #strokeTextButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #stroketextdropDowns{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 40px;
+	touch-action: none;
 }
 #stroketextmessage{
 	justify-content: center;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 .textmess{
 	width: 100%;
@@ -180,12 +205,14 @@ canvas{
 	padding: 6px;
 	font-size: 24px;
 	font-family: helvetica;
+	
 }
 #stroketextmovebuttons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #strokecircleDiv{
 	display:inline;
@@ -193,11 +220,13 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin:10;
-    padding:10;
+    	padding:10;
+	touch-action: none;
 }
 #strokeCircleButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #strokecircledropdowns{
 	display: inline-flex;
@@ -206,12 +235,14 @@ canvas{
 	padding-top: 40px;
 	padding-right: 50px;
 	padding-left: 50px;
+	touch-action: none;
 }
 #strokecirclemoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #imgDiv{
 	display:inline-flex;
@@ -219,8 +250,9 @@ canvas{
 	justify-content: center;
 	width: 100%;
 	border-radius: 8px;
-    padding-left:10px;
-    padding-right: 10px;
+   	padding-left:10px;
+    	padding-right: 10px;
+	touch-action: none;
 }
 #imageDiv{
 	display:inline;
@@ -228,28 +260,33 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin:10;
-    padding:10;
+    	padding:10;
+	touch-action: none;
 }
 #imageButtons{
 	display: inline-block;
 	justify-content: center;
+	touch-action: none;
 }
 #imagemoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 40px;
+	touch-action: none;
 }
 #imagesizeButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #imagefileButtons{
 	justify-content: center;
 	width: 100%;
 	padding-top: 20px;
+	touch-action: none;
 }
 #leftArcDiv{
 	display:inline;
@@ -257,13 +294,15 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin:10;
-    padding:10;
+    	padding:10;
+	touch-action: none;
 }
 #leftarcmoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 40px;
+	touch-action: none;
 }
 #righhtArcDiv{
 	display:inline;
@@ -271,13 +310,15 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin:10;
-    padding:10;
+    	padding:10;
+	touch-action: none;
 }
 #rightarcmoveButtons{
 	display: inline-flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 40px;
+	touch-action: none;
 }
 #holeSquareDiv{
 	display:inline;
@@ -285,7 +326,8 @@ canvas{
 	justify-content: center;
 	width: 25%;
 	margin:10;
-    padding:10;
+    	padding:10;
+	touch-action: none;
 }
 #holesquarecolor{
 	display: inline-flex;
@@ -298,6 +340,7 @@ canvas{
 	justify-content: space-between;
 	width: 100%;
 	padding-top: 25px;
+	touch-action: none;
 }
 #imgDisplayedC{
 	width: 12px;
