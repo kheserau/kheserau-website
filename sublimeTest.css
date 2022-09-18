@@ -380,6 +380,10 @@ button{
 	border-radius: 15px;
 	outline: none;
 	border: none;
+	-webkit-user-select: none;
+ 	-moz-user-select: none;
+ 	-ms-user-select: none;
+ 	user-select: none;
 }
 #down{
 	margin-top: 50px;
